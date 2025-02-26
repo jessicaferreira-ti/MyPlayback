@@ -1,0 +1,29 @@
+# Ignorar ambiente virtual
+myenv/*
+.venv/
+env/
+.env/
+
+# Ignorar arquivos de cache do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar arquivos de configuração local
+.vscode/
+.idea/
+.DS_Store
+
+# Ignorar arquivos gerados pelo Streamlit
+.streamlit/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de banco de dados local
+*.sqlite3
+*.db
+
+# Ignorar arquivos de mídia temporários
+*.mp4
+*.mp3
+*.srt
