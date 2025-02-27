@@ -19,8 +19,9 @@ st.title("Editor de Vídeo com IA")
 
 # Input para URL do YouTube
 url = st.text_input("Cole a URL do YouTube aqui")
+url = "https://youtu.be/ceqZBFinB3g?si=qzsHFQKD_--u1gWP"
 
-if url:
+if  url:
     # Exibe o vídeo do YouTube
     st.video(url)
 
@@ -32,9 +33,19 @@ if url:
 
     # Botão para gerar legendas
     if st.button("Gerar Legendas Automáticas") and 'video_path' in st.session_state:
-        subtitles = generate_subtitles(st.session_state['video_path'])
-        st.text_area("Legendas Geradas", subtitles)
-        st.session_state['subtitles'] = subtitles  # Salva as legendas na sessão
+        # subtitles = generate_subtitles(st.session_state['video_path'])
+        # st.text_area("Legendas Geradas", subtitles)
+        # st.session_state['subtitles'] = subtitles  # Salva as legendas na sessão
+        
+        try:
+            subtitles_path = generate_subtitles(st.session_state['video_path'])
+            st.success(f"Legendas geradas e salvas em: {subtitles_path}")
+            with open(subtitles_path, "r", encoding="utf-8") as f:
+                subtitles = f.read()
+            st.text_area("Legendas Geradas", subtitles)
+            st.session_state['subtitles'] = subtitles  # Salva as legendas na sessão
+        except Exception as e:
+            st.error(f"Erro ao gerar legendas: {e}")
 
     # Botão para remover áudio
     if st.button("Remover Áudio") and 'video_path' in st.session_state:

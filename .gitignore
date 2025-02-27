@@ -27,3 +27,6 @@ __pycache__/
 *.mp4
 *.mp3
 *.srt
+
+videos_baixados/
+video.mp4
