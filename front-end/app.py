@@ -60,6 +60,7 @@ if  url:
     # Botão para adicionar novo áudio
     if st.button("Adicionar Novo Áudio") and 'video_sem_audio' in st.session_state:
         audio_path = st.file_uploader("Faça upload do arquivo de áudio (instrumental)", type=["mp3", "wav"])
+        print('audio_path', audio_path)
         if audio_path:
             video_com_audio = add_audio(st.session_state['video_sem_audio'], audio_path)
             st.success(f"Novo áudio adicionado. Vídeo salvo em: {video_com_audio}")
