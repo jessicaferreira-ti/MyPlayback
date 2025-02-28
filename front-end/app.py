@@ -1,8 +1,12 @@
+import torch
 import streamlit as st
-
-
 import sys
 import os
+
+torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)] 
+
+# or simply:
+torch.classes.__path__ = []
 
 # Adiciona o diretório raiz ao PYTHONPATH
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -19,7 +23,7 @@ st.title("Editor de Vídeo com IA")
 
 # Input para URL do YouTube
 url = st.text_input("Cole a URL do YouTube aqui")
-url = "https://youtu.be/ceqZBFinB3g?si=qzsHFQKD_--u1gWP"
+url = "https://www.youtube.com/watch?v=gDXhFrYuZ7I"
 
 if  url:
     # Exibe o vídeo do YouTube

@@ -1,0 +1,29 @@
+Erro ao gerar legendas: Erro ao gerar legendas: ffmpeg was not found but is required to load audio files from filename
+No Windows 🖥️
+Baixe o FFmpeg:
+
+Acesse https://ffmpeg.org/download.html.
+Escolha a versão para Windows.
+Extraia e configure o caminho:
+
+Extraia os arquivos em uma pasta (exemplo: C:\ffmpeg).
+Adicione C:\ffmpeg\bin ao PATH do Windows:
+Abra o Painel de Controle → Sistema → Configurações Avançadas.
+Vá em Variáveis de Ambiente → Path → Editar.
+Adicione C:\ffmpeg\bin.
+Teste a instalação:
+
+Abra o Prompt de Comando (CMD) e digite:
+bash
+Copiar
+Editar
+ffmpeg -version
+Se aparecer a versão, está instalado corretamente.
+
+fechar prompt, vs code e anaconda
+reabrir projeto
+rodar arquivo: ffmpeg.py para testar instalação
+############################################################
+
+Erro ao gerar legendas: Erro ao gerar legendas: [Errno 13] Permission denied: 'videos_baixados'
+colocar o path exato do video
