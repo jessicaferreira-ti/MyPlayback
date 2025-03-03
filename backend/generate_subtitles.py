@@ -3,7 +3,7 @@ import subprocess
 import uuid
 from transformers import pipeline
 
-def split_audio(video_path, output_dir="audio_chunks", chunk_length=30):
+def split_audio(video_path, output_dir="outputs/audio_chunks", chunk_length=30):
     """Divide o áudio do vídeo em trechos menores de X segundos usando FFmpeg."""
     os.makedirs(output_dir, exist_ok=True)
     output_format = os.path.join(output_dir, "chunk_%03d.wav")
@@ -25,7 +25,7 @@ def format_timestamp(seconds):
     millis = int((seconds % 1) * 1000)
     return f"{hours:02}:{minutes:02}:{secs:02},{millis:03}"
 
-def generate_subtitles(video_path, output_dir="subtitles"):
+def generate_subtitles(video_path, output_dir="outputs/subtitles"):
     """Gera legendas no formato SRT."""
     try:
         os.makedirs(output_dir, exist_ok=True)
@@ -69,7 +69,7 @@ def generate_subtitles(video_path, output_dir="subtitles"):
 
 
 if __name__ == "__main__":
-    video_path = "./videos_baixados/Believer - First 1 minute.mp4" # Substitua pela URL correta
+    video_path = ".outputs/videos_baixados/Believer - First 1 minute.mp4" # Substitua pela URL correta
     try:
         subtitles_path = generate_subtitles(video_path)
         print(f"Legendas geradas e salvas em: {subtitles_path}")

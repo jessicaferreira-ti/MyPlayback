@@ -1,7 +1,7 @@
 import os
 from moviepy.editor import VideoFileClip, AudioFileClip
 
-def add_audio(video_path, audio_path, output_dir="outputs"):
+def add_audio(video_path, audio_path, output_dir="outputs/add_audio"):
     """Adiciona um novo áudio a um vídeo."""
     os.makedirs(output_dir, exist_ok=True)  # Cria a pasta de saída se não existir
 

@@ -1,6 +1,6 @@
 from moviepy.editor import TextClip, CompositeVideoClip, VideoFileClip
 
-def add_subtitles(video_path, subtitles, output_path="video_com_legendas.mp4"):
+def add_subtitles(video_path, subtitles, output_path="outputs/video_com_legendas"):
     video = VideoFileClip(video_path)
     txt_clip = TextClip(subtitles, fontsize=24, color='white')
     txt_clip = txt_clip.set_position('bottom').set_duration(video.duration)
