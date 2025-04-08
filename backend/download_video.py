@@ -11,7 +11,7 @@ def corrigir_url(url):
     else:
         raise ValueError("URL do YouTube inválida.")
 
-def download_video(url, output_path="videos_baixados"):
+def download_video(url, output_path="outputs/videos_baixados"):
     try:
         url_corrigida = corrigir_url(url)
         yt = YouTube(url_corrigida)

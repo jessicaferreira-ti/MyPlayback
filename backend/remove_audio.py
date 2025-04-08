@@ -1,7 +1,7 @@
 import os
 from moviepy.editor import VideoFileClip
 
-def remove_audio(video_path, output_dir="outputs"):
+def remove_audio(video_path, output_dir="outputs/midias_sem_audio"):
     """Remove o áudio do vídeo e salva como MP3 sem chamar FFmpeg diretamente."""
     os.makedirs(output_dir, exist_ok=True)
 
