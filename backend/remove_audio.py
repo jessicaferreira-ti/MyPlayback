@@ -29,7 +29,7 @@ def remove_audio(video_path, output_dir="outputs/midias_sem_audio"):
         raise Exception(f"Erro ao processar o vídeo: {e}")
 
 if __name__ == "__main__":
-    video_path = ".outputs/videos_baixados/Believer - First 1 minute.mp4" # Substitua pela URL correta
+    video_path = "./videos_baixados/Believer - First 1 minute.mp4" # Substitua pela URL correta
     try:
         video_sem_audio, audio_mp3 = remove_audio(video_path)
         print(f"✅ Vídeo sem áudio salvo em: {video_sem_audio}")
