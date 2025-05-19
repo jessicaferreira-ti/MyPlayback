@@ -1,3 +1,14 @@
+Comandos:
+pip install --user -r requirements.txt
+
+problema para instalar o streamleat no ambiente_python
+rodar: 
+conda install -c conda-forge streamlit
+
+torch
+conda install -c pytorch -c conda-forge pytorch torchvision streamlit
+
+
 Erro ao gerar legendas: Erro ao gerar legendas: ffmpeg was not found but is required to load audio files from filename
 No Windows 🖥️
 Baixe o FFmpeg:
@@ -20,6 +31,16 @@ Editar
 ffmpeg -version
 Se aparecer a versão, está instalado corretamente.
 
+
+No Ubuntu 🐧
+Instale o FFmpeg:
+sudo apt update
+sudo apt install ffmpeg
+
+Teste a instalação:
+ffmpeg -version
+
+Se aparecer a versão, está instalado corretamente.
 fechar prompt, vs code e anaconda
 reabrir projeto
 rodar arquivo: ffmpeg.py para testar instalação
