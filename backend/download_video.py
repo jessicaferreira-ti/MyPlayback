@@ -25,3 +25,11 @@ def download_video(url, output_path="outputs/videos_baixados"):
         return video_path  # Retorna o caminho completo do vídeo
     except Exception as e:
         raise Exception(f"Erro ao baixar o vídeo: {e}")
+
+if __name__ == "__main__":
+    url = input("Informe a URL do vídeo do YouTube: ")
+    try:
+        caminho = download_video(url)
+        print(f"Vídeo baixado com sucesso em: {caminho}")
+    except Exception as erro:
+        print(erro)
